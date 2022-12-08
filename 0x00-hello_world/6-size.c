@@ -6,7 +6,7 @@
   */
 int main(void)
 {
-	int c i li lli f;
+	int c, i, li, lli, f;
 
 	c = sizeof(char);
 	i = sizeof(int);
@@ -14,11 +14,11 @@ int main(void)
 	lli = sizeof(long long int);
 	f = sizeof(float);
 
-	printf("Size of a int: %c\n", c)
-	printf("Size of an int: %d\n", i)
-	printf("Size of a long int: %li\n", li)
-	printf("Size of long long int: %lli\n", lli)
-	printf("Size of a float: %f\n", f)
+	printf("Size of a char: %d byte(s)\n", c);
+	printf("Size of an int: %d byte(s)\n", i);
+	printf("Size of a long int: %d byte(s)\n", li);
+	printf("Size of long long int: %d byte(s)\n", lli);
+	printf("Size of a float: %d byte(s)\n", f);
 
-	return (0)
+	return (0);
 }
