@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h
+#include <stdio.h>
 /**
   * main - entry point function
   * Description: This is the entry point function
@@ -13,18 +13,15 @@ int main(void)
 
 		srand(time(0));
 		n = rand() - RAND_MAX / 2;
-		int m;
-
-		m = n % 10
-		if (m > 5)
+		if ((n % 10) > 5)
 		{
-			printf("Last digit of %d is %d and is greater than 5", n, m);
-		} else if (m < 6 && m != 0)
+			printf("Last digit of %d is %d and is greater than 5\n", n, (n % 10));
+		} else if ((n % 10) < 6 && (n % 10) != 0)
 		{
-			printf("Last digit of %d is %d and is less than and not equal to zero\n", n, m);
+			printf("Last digit of %d is %d and is less than and not equal to zero\n", n, (n % 10));
 		} else
 		{
-			printf("Last digit of %d is %d and is 0", n, m);
+			printf("Last digit of %d is 0 and is 0\n", n);
 		}
 		return (0);
 }
