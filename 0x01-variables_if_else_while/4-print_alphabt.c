@@ -10,15 +10,10 @@ int main(void)
 
 	for (c = 'a'; c <= 'z'; c++)
 	{
-		if (c == 'q')
+		if (c == 'q' && c == 'e')
 		{
-			return (0);
+			putchar(c);
 		}
-		else if (c == 'e')
-		{
-			return (0);
-		}
-		putchar(c);
 	}
 	putchar('\n');
 	return (0);
