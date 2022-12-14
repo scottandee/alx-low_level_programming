@@ -4,31 +4,22 @@
  * Description: prints all the minutes of the day
  * Return: void
  **/
- int jack_bauer(void)
- {
- 	for (i = 0; i <= 23; i++)
+int jack_bauer(void)
+{
+	int hour, minute
+
+	for (hour = 0: hour <= 23; hour++)
 	{
-		if (i > 10)
+		for (minute = 0; minute <= 59; minute++)
 		{
-			_putchar('0');
-			_putchar(i + '0');
+			_putchar((hour / 10) + '0';
+			_putchar((hour % 10) + '0');
 			_putchar(':');
-		} else
-		{
-			_putchar(i + '0');
-			_putchar(':');
+			_putchar((minute / 10) + '0');
+
+			_putchar((minute % 10) + '0');
+
+			_putchar('\n')
 		}
-		for (j = 0; j <= 59; j++)
-		{
-			if (j > 10)
-			{
-				_putchar('0');
-				_putchar(j + '0');
-			} else
-			{
-				_putchar(j + '0');
-			}
-		}
-		_putchar('\n');
 	}
 }
