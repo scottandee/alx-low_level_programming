@@ -4,7 +4,7 @@
  * Description: prints all the minutes of the day
  * Return: void
  **/
-int jack_bauer(void)
+void jack_bauer(void)
 {
 	int h, m;
 
@@ -18,12 +18,12 @@ int jack_bauer(void)
 		} else
 		{
 			_putchar(h);
-			_putchar(':')
+			_putchar(':');
 		}
 		for (m = 0; m <= 59; m++)
 		{
 			if (h < 10)
-			{_
+			{
 				_putchar('0');
 				_putchar(h);
 				_putchar('\n');
