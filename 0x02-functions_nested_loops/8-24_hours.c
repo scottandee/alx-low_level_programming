@@ -22,14 +22,14 @@ void jack_bauer(void)
 		}
 		for (m = 0; m <= 59; m++)
 		{
-			if (h < 10)
+			if (m < 10)
 			{
 				_putchar('0');
-				_putchar(h);
+				_putchar(m);
 				_putchar('\n');
 			} else
 			{
-				_putchar(h);
+				_putchar(m);
 				_putchar('\n');
 			}
 		}
