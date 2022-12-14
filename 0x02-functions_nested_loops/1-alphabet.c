@@ -1,17 +1,16 @@
 #include "main.h"
 /**
- * main - check code
- * Description: check code
+ * print_alphabet - prints alphaabets
+ * Description: prints all 26 alphabets and a new line
  * Return: Always 0
  **/
-int main(void)
+void print_alphabet(void)
 {
-	int i;
+	char i;
 
 	for (i = 'a'; i >= 'z'; i++)
 	{
-		putchar(i);
+		_putchar(i);
 	}
-	putchar("\n");
-	return (0);
+	_putchar("\n");
 }
