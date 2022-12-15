@@ -20,7 +20,7 @@ int largest_number(int a, int b, int c)
 	{
 		b = b * (-1);
 	}
-	else
+	else if (c < 0)
 	{
 		c = c * (-1);
 	}
