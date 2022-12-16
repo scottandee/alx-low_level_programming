@@ -7,6 +7,8 @@
 
 int main(void)
 {
+	int i;
+
 	for (i = 1; i < 101; i++)
 	{
 		if (i % 15 == 0)
@@ -23,4 +25,5 @@ int main(void)
 		}
 		printf("%d ", i);
 	}
+	return (0);
 }
