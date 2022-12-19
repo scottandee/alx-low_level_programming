@@ -10,24 +10,26 @@ void jack_bauer(void)
 
 	for (h = 0; h <= 23; h++)
 	{
-		if (h < 10)
-		{
-			_putchar('0');
-			_putchar(h + '0');
-			_putchar(':');
-		} else
-		{
-			_putchar(h + '0');
-			_putchar(':');
-		}
 		for (m = 0; m <= 59; m++)
 		{
+			if (h < 10)
+			{
+				_putchar('0');
+				_putchar(h + '0');
+				_putchar(':');
+			}
+			else
+			{
+				_putchar(h + '0');
+				_putchar(':');
+			}
 			if (m < 10)
 			{
 				_putchar('0');
 				_putchar(m + '0');
 				_putchar('\n');
-			} else
+			}
+			else
 			{
 				_putchar(m + '0');
 				_putchar('\n');
