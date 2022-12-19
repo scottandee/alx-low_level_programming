@@ -7,8 +7,8 @@
 
 int _strlen(char *s)
 {
-	int arr.length;
+	int arr_length;
 
-	arr.length = sizeof(*s) / sizeof(*s[0]);
-	_putchar(arr.length + '0');
+	arr_length = sizeof(*s) / sizeof(*s[0]);
+	_putchar(arr_length + '0');
 }
