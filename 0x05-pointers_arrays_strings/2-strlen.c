@@ -11,4 +11,5 @@ int _strlen(char *s)
 
 	arr_length = sizeof(*s) / sizeof(s[0]);
 	_putchar(arr_length + '0');
+	return (0);
 }
