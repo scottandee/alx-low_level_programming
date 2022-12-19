@@ -9,7 +9,7 @@ int _strlen(char *s)
 {
 	int arr_length;
 
-	arr_length = sizeof(*s) / sizeof(s[0]);
+	arr_length = sizeof(*s) / sizeof(*(p + 0));
 	_putchar(arr_length + '0');
 	return (0);
 }
