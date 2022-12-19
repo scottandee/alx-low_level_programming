@@ -7,9 +7,11 @@
 
 int _strlen(char *s)
 {
-	int arr_length;
+	int length = 0;
 
-	arr_length = sizeof(*s) / sizeof(*(s + 0));
-	_putchar(arr_length + '0');
-	return (0);
+	while (string[length] != '\0')
+	{
+		length++
+	}
+	return (length);
 }
