@@ -7,7 +7,12 @@
 
 void _puts(char *str)
 {
-	int i, length = _strlen(str);
+	int i, length = 0;
+
+	while (*(str + length))
+	{
+		length++
+	}
 
 	for (i = 0; i < length; i++)
 	{
