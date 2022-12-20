@@ -11,7 +11,7 @@ void _puts(char *str)
 
 	while (*(str + length))
 	{
-		length++
+		length++;
 	}
 
 	for (i = 0; i < length; i++)
