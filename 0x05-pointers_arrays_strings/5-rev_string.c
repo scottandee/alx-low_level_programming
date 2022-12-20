@@ -7,18 +7,18 @@
 
 void print_rev(char *s)
 {
-	int i, length = 0;
-
-	char a[];
+	int i, length = 0;	
 
 	while (*(s + length) != '\0')
 	{
 		length++;
 	}
+	char a[length];
+
 	for (i = length; i >= 0; i--)
 	{
 		a[length - i] = *(s + i);
 	}
-	*s = a[];
+	*s = a[length];
 	
 }
