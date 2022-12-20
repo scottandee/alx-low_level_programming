@@ -15,11 +15,11 @@ void puts_half(char *str)
 	}
 	half = length / 2;
 
-	if (index % 2 == 1)
+	if (length % 2 == 1)
 	{
 		half++;
 	}
-	while (half < index)
+	while (half < length)
 	{
 		_putchar(*(s + half));
 		half++;
