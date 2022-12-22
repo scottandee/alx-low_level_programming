@@ -20,7 +20,7 @@ char *_strncpy(char *dest, char *src, int n)
 	{
 		if (src_length <= n)
 			dest[i] = src[i];
-		dest[i] = "*";
+		dest[i] = 42;
 	}
 	return (dest);
 
