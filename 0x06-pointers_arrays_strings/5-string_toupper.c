@@ -2,22 +2,25 @@
 
 /**
 * *string_toupper - this converts all the letters of a string to uppercase
+* @str: this is a string
+* Return: str
 */
 
-char *string_toupper(char *)
+char *string_toupper(char *str)
 {
-	int length = 0;
+	int i, length = 0;
 
-	while (s[length] != '\0')
+	while (str[length] != '\0')
 	{
 		length++;
 	}
 
 	for (i = 0; i < length; i++)
 	{
-		if (i > 64 && i < 91)
+		if (i >= 65 && i <= 90)
 		{
-			s[i] = s[i] + 32;
+			str[i] = str[i] - 32;
 		}
 	}
+	return (str);
 }
