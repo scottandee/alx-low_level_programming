@@ -13,7 +13,15 @@ void times_table(void)
 		for (j = 0; j <= 9; j++)
 		{
 			times = i * j;
-			_putchar(times + '0');
+			if (times > 9)
+			{
+				_putchar((i / 10) + '0');
+				_putchar((i % 10) + '0');
+			}
+			else
+			{
+				_putchar(times + '0');
+			}
 			if (j == 9)
 			{
 				_putchar('\n');
