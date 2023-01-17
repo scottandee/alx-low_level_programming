@@ -4,7 +4,7 @@
 
 /**
 * print_dog - this prints the properties of a dog
-* @d - struct variable name
+* @d: struct variable name
 */
 
 void print_dog(struct dog *d)
@@ -27,4 +27,5 @@ void print_dog(struct dog *d)
 		printf("Age: %f\n", d->age);
 		printf("Name: %s\n", d->name);
 	}
+	return;
 }
