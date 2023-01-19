@@ -8,15 +8,9 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-	void (*ptname)(char *) = &print_name_as_is;
-	void (*ptuppercase)(char *) = &print_name_uppercase;
-
-	if (f == ptname)
+	if (!name || !f)
 	{
-		(*ptname)(name);
+		return;
 	}
-	if (f == ptuppercase)
-	{
-		(*ptuppercase)(name);
-	}
+	f(name);
 }
