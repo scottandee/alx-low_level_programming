@@ -29,7 +29,6 @@ int main(int argc, char **argv)
   * cp - this copies the content of a file into another file
   * @file_from: this is the file that will be read from
   * @file_to: this is the file that will be written to
-  * Return:
   */
 void cp(const char *file_from, const char *file_to)
 {
@@ -42,6 +41,11 @@ void cp(const char *file_from, const char *file_to)
 	free(buffer);
 }
 
+/**
+  * read_from - this reads from file from and strores in the buffer
+  * @file_from: this is the file it will read from
+  * @buffer: this is the temporary storage
+  */
 void read_from(const char *file_from, char *buffer)
 {
 	int o, r, c;
@@ -62,6 +66,11 @@ void read_from(const char *file_from, char *buffer)
 	}
 }
 
+/**
+  * write_to - this writes from the temporary storage to the file_to
+  * @file_to: this is the file that buffer will be written to
+  * @buffer: this is the temporary storage
+  */
 void write_to(const char *file_to, char *buffer)
 {
 	int o, w, c;
