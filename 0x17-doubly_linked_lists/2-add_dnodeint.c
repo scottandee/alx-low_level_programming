@@ -20,6 +20,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	}
 	new_node->prev = NULL;
 	new_node->n = n;
+	/*Condition for an empty doubly linked list*/
 	if (*head == NULL)
 	{
 		*head = new_node;
@@ -27,8 +28,11 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	}
 	else
 	{
+		/*update next for new_node*/
 		new_node->next = *head;
+		/*update prev for existing node*/
 		temp->prev = new_node;
+		/*Assign the new node to be the head*/
 		*head = new_node;
 	}
 	return (new_node);
