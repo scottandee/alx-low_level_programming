@@ -12,7 +12,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	dlistint_t *temp, *new_node;
 	/* Assigning a temporary container for the head file*/
 	temp = *head;
-	
+
 	/* Allocating memory for a new node*/
 	new_node = malloc(sizeof(dlistint_t));
 	if (new_node == NULL)
@@ -40,7 +40,6 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 		new_node->prev = temp;
 		temp->next = new_node;
 	}
-	
+
 	return (new_node);
 }
- 
