@@ -3,7 +3,7 @@
 /**
   * key_index - this returns the index of a key
   * @key: this is the key that will be searched for
-  * size: this is the size of the table that is to be created
+  * @size: this is the size of the table that is to be created
   * Return: returns the index at which a key/value pair should be stored
   */
 
