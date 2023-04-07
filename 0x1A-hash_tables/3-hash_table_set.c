@@ -13,7 +13,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int index;
 	hash_node_t *temp, *new_node;
 
-	if (strcmp(key, "") == 0) /*check if key is empty*/
+	if (!ht || !key || !*key || !value) /*check if key is empty*/
 	{
 		return (0);
 	}
