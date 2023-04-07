@@ -14,7 +14,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *new_node = malloc(sizeof(hash_node_t));
 	hash_node_t *current;
 
-	if (strcmp(key,"") == 0)
+	if (strcmp(key, "") == 0)
 	{
 		return (0);
 	}
@@ -34,7 +34,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (strcmp(new_node->key, key) == 0)
 		{
-			strcpy(current->value, value);
+			strcpy(ht->array[index]->value, value);
 		}
 		else
 		{
