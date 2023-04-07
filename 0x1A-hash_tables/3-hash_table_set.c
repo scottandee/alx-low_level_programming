@@ -37,7 +37,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			if (strcmp(new_node->key, key) == 0)
 			/*If only an update to key value is needed*/
 			{
-				strcpy(ht->array[index]->value, value);
+				free(ht->array[index]->value);
+				ht->array[index]->value = strdup(value);
+				free(new_node);
 				return (1);
 			}
 			temp = temp->next;
