@@ -32,7 +32,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (strcmp(new_node->key, key) == 0)
 		{
-			ht->array[index]->value= strdup(value);
+			ht->array[index]->value = strdup(value);
 		}
 		else
 		{
