@@ -19,10 +19,10 @@ void hash_table_print(const hash_table_t *ht)
 		}
 		else
 		{
-			buffer++;
 			temp = ht->array[i];
 			while (temp != NULL)
 			{
+				buffer++;
 				if (buffer == 1)
 				{
 					printf("'%s': '%s'", temp->key, temp->value);
