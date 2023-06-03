@@ -42,6 +42,7 @@ void cp(const char *file_from, const char *file_to)
 		read = read_from(file_from, buffer, count);
 		if (read != 0)
 			write_to(file_to, buffer, count, read);
+		free(buffer);
 	}
 }
 
@@ -98,7 +99,7 @@ int write_to(const char *file_to, char *buffer, int count, int read)
 
 	if (count == 1)
 	{
-		o = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0644);
+		o = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	}
 	else
 	{
