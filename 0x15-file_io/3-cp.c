@@ -51,13 +51,19 @@ void read_from(const char *file_from, char *buffer)
 	int o, r, c;
 
 	o = open(file_from, O_RDONLY);
-	r = read(o, buffer, 1024);
-
-	if (o == -1 || r == -1)
+	if (o == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
+
+	r = read(o, buffer, 1024);
+	if (r == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+		exit(98);
+	}
+
 	c = close(o);
 	if (c == -1)
 	{
@@ -75,10 +81,15 @@ void write_to(const char *file_to, char *buffer)
 {
 	int o, w, c;
 
-	o = open(file_to,  O_WRONLY | O_TRUNC);
+	o = open(file_to,  O_CREAT | O_WRONLY | O_TRUNC, 0644);
+	if (o == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
+		exit(99);
+	}
 	w = write(o, buffer, 1024);
 
-	if (o == -1 || w == -1)
+	if (w == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 		exit(99);
