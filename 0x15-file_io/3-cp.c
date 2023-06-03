@@ -33,7 +33,7 @@ int main(int argc, char **argv)
 void cp(const char *file_from, const char *file_to)
 {
 	char *buffer;
-	int read = 1, count = 0, written = 0;
+	int read = 1, count = 0;
 
 	buffer = malloc(1024);
 
@@ -43,7 +43,7 @@ void cp(const char *file_from, const char *file_to)
 		read = read_from(file_from, buffer, count);
 		if (read != 0)
 		{
-			written = write_to(file_to, buffer, count);
+			write_to(file_to, buffer, count);
 		}
 	}
 	free(buffer);
