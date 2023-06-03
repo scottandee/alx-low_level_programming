@@ -41,11 +41,9 @@ void cp(const char *file_from, const char *file_to)
 	{
 		count += 1;
 		read = read_from(file_from, buffer, count);
-		printf("read: %d\n", read);
 		if (read != 0)
 		{
 			written = write_to(file_to, buffer, count);
-			printf("written: %d\n", written);
 		}
 	}
 	free(buffer);
@@ -63,14 +61,14 @@ int read_from(const char *file_from, char *buffer, int count)
 	int o, r, c, seek = 1024 * (count - 1);
 
 	o = open(file_from, O_RDONLY);
-	if (count != 1)
-	{
-		lseek(o, seek, SEEK_SET);
-	}
 	if (o == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		exit(98);
+	}
+	if (count != 1)
+	{
+		lseek(o, seek, SEEK_SET);
 	}
 
 	r = read(o, buffer, 1024);
