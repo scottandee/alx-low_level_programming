@@ -79,7 +79,7 @@ void read_from(const char *file_from, char *buffer)
   */
 void write_to(const char *file_to, char *buffer)
 {
-	int o, w, c;
+	int o, w, c, len = 0;
 
 	o = open(file_to,  O_CREAT | O_WRONLY | O_TRUNC, 0644);
 	if (o == -1)
@@ -87,7 +87,11 @@ void write_to(const char *file_to, char *buffer)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 		exit(99);
 	}
-	w = write(o, buffer, 1024);
+	while (buffer[len] != '\0')
+	{
+		len++;
+	}
+	w = write(o, buffer, len);
 
 	if (w == -1)
 	{
