@@ -5,7 +5,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 int read_from(const char *file_from, char *buffer, int count);
-int write_to(const char *file_to, char *buffer, int count);
+int write_to(const char *file_to, char *buffer, int count, int read);
 void cp(const char *file_from, const char *file_to);
 
 /**
@@ -35,18 +35,14 @@ void cp(const char *file_from, const char *file_to)
 	char *buffer;
 	int read = 1, count = 0;
 
-	buffer = malloc(1024);
-
 	while (read != 0)
 	{
+		buffer = malloc(1024);
 		count += 1;
 		read = read_from(file_from, buffer, count);
 		if (read != 0)
-		{
-			write_to(file_to, buffer, count);
-		}
+			write_to(file_to, buffer, count, read);
 	}
-	free(buffer);
 }
 
 /**
@@ -91,12 +87,14 @@ int read_from(const char *file_from, char *buffer, int count)
   * write_to - this writes from the temporary storage to the file_to
   * @file_to: this is the file that buffer will be written to
   * @buffer: this is the temporary storagei
-  * @count: this is the number of times the file has beeen read
+  * @count: this is the number of times the file has beeen opened for
+  * reading
+  * @read: this is the number bytes read
   * Return: this function returns the number of bytes written
   */
-int write_to(const char *file_to, char *buffer, int count)
+int write_to(const char *file_to, char *buffer, int count, int read)
 {
-	int o, w, c, len = 0;
+	int o, w, c;
 
 	if (count == 1)
 	{
@@ -111,11 +109,7 @@ int write_to(const char *file_to, char *buffer, int count)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 		exit(99);
 	}
-	while (buffer[len] != '\0')
-	{
-		len++;
-	}
-	w = write(o, buffer, len);
+	w = write(o, buffer, read);
 
 	if (w == -1)
 	{
@@ -128,6 +122,5 @@ int write_to(const char *file_to, char *buffer, int count)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", o);
 		exit(100);
 	}
-
 	return (w);
 }
