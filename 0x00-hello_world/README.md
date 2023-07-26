@@ -19,10 +19,14 @@ This stands for GNU compiler collection. Some common flags are:
 2. `-o <output_file>`
 3. `-Wall`: enables most warning messages
 4. `-Werror`: Treats all warnings as errors
-5. `-std=<standard>`: sets the C standard language to be used
-6. `-g`: Enable debugging information
-7. `-E`: runs only preprocessor stage
-8. `-S`: Stops after compilation stage(produces a `.s` file)
+5. `-pedantic`: Flag is to enforce adherence to the language standard and help developers write portable and compliant code
+6. `-Wextra`: enables additional warning messages
+7. `-std=<standard>`: sets the C standard language to be used
+8. `-g`: Enable debugging information
+9. `-E`: runs only preprocessor stage
+10. `-S`: Stops after compilation stage(produces a `.s` file)
+11. `-m32`: generate code for a 32 bit architecture
+12. `-m64`: generate code for a 64 bit architecture
 
 ## Difference between `puts` and `putchar`
 `puts` is used to write strings. `putchar` is used to write characters.
