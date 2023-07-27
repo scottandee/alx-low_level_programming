@@ -13,5 +13,10 @@ ASCII stands for American Standard Code for Information Interchange. It is a 7-b
 ## Difference between `puts` and `putchar`
 `puts` is used to print out a string. putchar is used to print out a character. `putchar` can be used to print a number if we do this: `putchar(number + '0')`.
 
+## Some Tips on Printing Out Two Digit Numbers One After the Other
+```bash
+15 / 10 = 1
+15 % 10 = 5
+```
 ## Author
 * Olayinkascott Andee(andeeolayinkascott@gmail.com)
