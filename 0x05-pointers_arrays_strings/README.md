@@ -46,3 +46,8 @@ int a[5];
 
 ## About the `char` C Data Type
 The `char` datatype is a an integer type that represents a character using its ASCII code. The ASCII code for the character '0' is 48, and the ASCII codes for the characters '1' to '9' are 49 to 57, respectively. When you subtract the ASCII code for '0' (48) from the ASCII code for any digit character, you get the integer value of that digit. For example, the ASCII code for '5' is 53, so '5' - '0' is 53 - 48, which equals 5. Therefore, when you subtract the ASCII code for '0' from a character that represents a digit, you effectively convert that character to its corresponding integer value.
+
+## Check the `man` Page for the Following Functions
+* `strlen`
+* `puts`
+* `atoi`
