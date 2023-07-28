@@ -1,4 +1,4 @@
-# 0x06-pointers_arrays_strings
+# 0x06- Pointers, Arrays, Strings
 In this project, we explore pointers to pointers an multi-dimensional arrays
 
 ## Pointer to a Pointer
