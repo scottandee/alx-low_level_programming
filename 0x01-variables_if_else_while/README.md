@@ -8,7 +8,10 @@ Keywords/reserved keywords are words that cannot be used by identifiers. They al
 Relational operators compare two values and return either true or false(e.g >, <, ==). Logical operators perform logical operations on true and false(e.g &&, ||). Values used with logical operators are converted to booleans prior to being evaluated.
 
 ## About ASCII
-ASCII stands for American Standard Code for Information Interchange. It is a 7-bit standard data-encoding format for electronic communication between computers.
+ASCII stands for American Standard Code for Information Interchange. It is a 7-bit standard data-encoding format for electronic communication between computers. One important thing we have to note in C is that characters are always stored as their respective ASCII code. Characters can be found in various places. Some exampples of those places are:
+* Strings
+* Arrays
+* Characters
 
 ## Difference between `puts` and `putchar`
 `puts` is used to print out a string. putchar is used to print out a character. `putchar` can be used to print a number if we do this: `putchar(number + '0')`.
