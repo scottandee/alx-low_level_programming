@@ -38,3 +38,10 @@ int a[3][4] = {
 ```
 **Note**: The curly braces separating each block is optional
 
+## Check the `man` Page for These Functions
+* `memset`
+* `memcpy` - This is used to copy stuff that is not null terminated
+* `strchr`
+* `strspn`
+* `strpbrk`
+* `strstr`
