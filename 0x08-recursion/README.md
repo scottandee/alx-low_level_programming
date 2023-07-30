@@ -1,4 +1,4 @@
-# 0x08 - RECURSION
+# 0x08 - Recursion
 In this project, we explore the art of recursive programming
 
 ## What is Recursion
