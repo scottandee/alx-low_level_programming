@@ -11,6 +11,32 @@ char *str;
 
 str = "Scott";
 ```
-The string `"Scott"` that was just declared is stored automatically when
+The string `"Scott"` that was just declared is stored automatically when the program is launched. But, the memory that stores the string is only readable. If you try to change it, you'll have a segfault. `char *str` is only a pointer to the read only memory. If it's declared as an array:
+```c
+char str[];
+
+str = "Holberton"
+```
+In this case, the variable `str` stores a copy of the read only memory. This copy has read and write permissions.
+
 ## What is Dynamic Memory Allocation
-Dynamic Memory Allocation
+The need for Dynamic Memory Allocation arises when we do not know the exact amount of memory we need at the time we're writing the program and we will know this at execution or runtime.
+
+## `malloc`
+This allocates a specific amount if bytes in memory and returns a void pointer(This means that it is a ponter to the type of our choice) to the allocated memory. This memory is unitialized and has read and write permissions. Always use `sizeof` when allocating memory for better portability.
+
+## `free`
+The memory we've allocated with malloc is not controlled by the computer. We are tasked with the responsibility of managing this memory. Once we allocate memory with `malloc`, we have to free the memory when we're done with `free`.
+
+## About C Program Layout
+[GeeksforGeeks](https://www.geeksforgeeks.org/memory-layout-of-c-program/)
+
+## Note
+On error, malloc returns `NULL`. Always check for that malloc is successful.
+
+## `valgrind`
+This is a program used to monitor dynamically allocated memory. Here are some useful flags
+* `-s`
+* `--leak-check=full`
+* `--show-leak-kinds=all`
+* `--track-origins=yes`
