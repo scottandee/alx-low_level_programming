@@ -15,11 +15,16 @@
 char *argstostr(int ac, char **av)
 {
 	int i;
-	char *str = NULL;
+	char *str = NULL, *buffer = NULL;
 
 	for (i = 0; i < ac; i++)
 	{
-		str = str_concat_plus(str, av[i]);
+		buffer = str_concat_plus(str, av[i]);
+		if (buffer != NULL)
+		{
+			free(str);
+		}
+		str = buffer;
 	}
 	return (str);
 }
